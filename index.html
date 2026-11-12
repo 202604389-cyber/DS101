@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS101 - Complete Course Hub (Detailed Study Guide + Quiz)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Tajawal', 'Inter', sans-serif; }
+        .en-text { font-family: 'Inter', sans-serif; direction: ltr; text-align: left; }
+        .bilingual-card { border-right: 4px solid #6366f1; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between">
+
+    <!-- Header & Navigation -->
+    <header class="bg-slate-800 border-b border-slate-700 sticky top-0 z-40 shadow-md">
+        <div class="max-w-5xl mx-auto p-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <h1 class="text-xl md:text-2xl font-bold text-indigo-400">DS101: Complete Learning & Revision Hub</h1>
+                <p class="text-xs text-slate-400">Dr. Ahmad Abd El-Kader - Pharos University in Alexandria (PUA)</p>
+            </div>
+            
+            <div class="flex items-center gap-2 flex-wrap justify-center">
+                <!-- Navigation Tabs -->
+                <div class="flex bg-slate-900 p-1 rounded-lg border border-slate-700">
+                    <button id="tab-summary" onclick="switchTab('summary')" class="px-3 py-1.5 text-xs md:text-sm font-bold rounded-md bg-indigo-600 text-white transition">
+                        📚 الشرح التفصيلي للمحاضرات
+                    </button>
+                    <button id="tab-quiz" onclick="switchTab('quiz')" class="px-3 py-1.5 text-xs md:text-sm font-bold rounded-md text-slate-400 hover:text-white transition">
+                        📝 كويزات الأسئلة (48)
+                    </button>
+                </div>
+
+                <!-- Model Answers Button -->
+                <button onclick="openModelAnswersModal()" class="px-3 py-1.5 text-xs md:text-sm font-bold rounded-lg bg-amber-600 hover:bg-amber-500 text-white transition flex items-center gap-1 shadow-md">
+                    <span>📋 Model Answers</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto p-4 flex-grow w-full">
+
+        <!-- ========================================================= -->
+        <!-- SECTION 1: DETAILED LECTURE EXPLANATIONS (DEFAULT VIEW)   -->
+        <!-- ========================================================= -->
+        <div id="section-summary" class="space-y-8 my-2">
+            
+            <!-- Quick Jump Navigation -->
+            <div class="bg-slate-800 p-4 rounded-xl border border-slate-700 shadow-md">
+                <div class="text-xs font-bold text-slate-400 mb-3">انتقال سريع للمحاضرات / Quick Jump:</div>
+                <div class="flex flex-wrap gap-2">
+                    <a href="#lec1-detail" class="px-3 py-1.5 bg-slate-700 hover:bg-indigo-600 rounded-lg text-xs font-bold transition">المحاضرة 1: Intro & 5 Pillars</a>
+                    <a href="#lec2-detail" class="px-3 py-1.5 bg-slate-700 hover:bg-indigo-600 rounded-lg text-xs font-bold transition">المحاضرة 2: TPS vs MIS</a>
+                    <a href="#lec3-detail" class="px-3 py-1.5 bg-slate-700 hover:bg-indigo-600 rounded-lg text-xs font-bold transition">المحاضرة 3: Web, HTTP & DNS</a>
+                    <a href="#lec4-detail" class="px-3 py-1.5 bg-slate-700 hover:bg-indigo-600 rounded-lg text-xs font-bold transition">المحاضرة 4: Web Servers & Hosting</a>
+                    <a href="#lec5-detail" class="px-3 py-1.5 bg-slate-700 hover:bg-indigo-600 rounded-lg text-xs font-bold transition">المحاضرة 5: Cloud Computing</a>
+                    <a href="#lec6-detail" class="px-3 py-1.5 bg-slate-700 hover:bg-indigo-600 rounded-lg text-xs font-bold transition">المحاضرة 6: SDLC & Agile</a>
+                </div>
+            </div>
+
+            <!-- ==================== LECTURE 1 ==================== -->
+            <article id="lec1-detail" class="bg-slate-800 rounded-xl p-6 md:p-8 border border-slate-700 shadow-xl space-y-6">
+                <div class="border-b border-slate-700 pb-4">
+                    <span class="text-xs font-bold bg-indigo-900/80 text-indigo-300 px-3 py-1 rounded-full">Lecture 01</span>
+                    <h2 class="text-2xl font-extrabold text-white mt-2">Introduction to Information Systems & The 5 Pillars</h2>
+                    <p class="text-sm text-indigo-300">مقدمة في نظم المعلومات وأركانها الخمسة وسلسلة القيمة</p>
+                </div>
+
+                <!-- Concept 1.1 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">1. The Data-to-Knowledge Pipeline (مسار تحويل البيانات إلى قرار)</h3>
+                    <p class="en-text text-sm text-slate-300">Information systems exist to transform raw, meaningless facts into actionable business decisions through three stages:</p>
+                    <p class="text-sm text-slate-300">الهدف الأساسي لأي نظام معلومات هو تحويل الحقائق الخام غير المفهومة إلى قرارات عملية تفيد المؤسسة عبر 3 مراحل متتالية:</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                            <div class="font-bold text-indigo-400 en-text">① Data (البيانات)</div>
+                            <p class="en-text text-xs text-slate-300 mt-1">Raw, unorganized facts without any context or meaning.</p>
+                            <p class="text-xs text-slate-400 mt-2">حقائق وأرقام خام مجردة بدون أي سياق يوضح معناها.</p>
+                            <div class="mt-2 p-2 bg-slate-900 rounded text-xs text-amber-300">مثال: الرقم <strong>15,000</strong> أو اسم <strong>"أحمد"</strong> فقط.</div>
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                            <div class="font-bold text-indigo-400 en-text">② Information (المعلومات)</div>
+                            <p class="en-text text-xs text-slate-300 mt-1">Data that has been processed, organized, and given context.</p>
+                            <p class="text-xs text-slate-400 mt-2">بيانات تمت معالجتها وتنظيمها ووضعها في سياق مفهوم.</p>
+                            <div class="mt-2 p-2 bg-slate-900 rounded text-xs text-amber-300">مثال: رصيد حساب العميل أحمد هو <strong>15,000 جنيه</strong>.</div>
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                            <div class="font-bold text-indigo-400 en-text">③ Knowledge (المعرفة)</div>
+                            <p class="en-text text-xs text-slate-300 mt-1">Applying information and experience to make decisions and take action.</p>
+                            <p class="text-xs text-slate-400 mt-2">استيعاب المعلومات وتطبيقها لاتخاذ قرار فعلي.</p>
+                            <div class="mt-2 p-2 bg-slate-900 rounded text-xs text-amber-300">مثال: <strong>رفض</strong> طلب قرض بقيمة 500,000 جنيه لعدم كفاية الرصيد.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concept 1.2 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">2. The 5 Core Pillars of IS (أركان نظم المعلومات الخمسة)</h3>
+                    <p class="text-sm text-slate-300">أي نظام معلومات ناجح (مثل تطبيق أوبر أو طلبات أو نظام بنكي) لا يقتصر على البرمجة فقط، بل يعتمد على تكامل 5 أركان أساسية:</p>
+                    <ul class="space-y-2 text-sm">
+                        <li class="p-3 bg-slate-800 rounded border border-slate-700">
+                            <strong class="text-indigo-300 en-text">1. Hardware (الأجهزة المادية):</strong> المكونات الملموسة مثل الهواتف الذكية، السيرفرات، أجهزة الكاشير، الكابلات، وأجهزة الـ GPS.
+                        </li>
+                        <li class="p-3 bg-slate-800 rounded border border-slate-700">
+                            <strong class="text-indigo-300 en-text">2. Software (البرمجيات):</strong> البرامج والتطبيقات وأنظمة التشغيل التي تعطي الأوامر للأجهزة (مثل تطبيق الموبايل أو قاعدة البيانات).
+                        </li>
+                        <li class="p-3 bg-slate-800 rounded border border-slate-700">
+                            <strong class="text-indigo-300 en-text">3. Data (البيانات):</strong> المادة الخام المخزنة داخل النظام مثل بيانات العملاء، قوائم المنتجات، الأسعار، وسجل المعاملات.
+                        </li>
+                        <li class="p-3 bg-slate-800 rounded border border-slate-700">
+                            <strong class="text-indigo-300 en-text">4. Processes (العمليات والإجراءات):</strong> القواعد والخطوات المنظمة لسير العمل (مثل: خطوات التحقق من الرقم السري في ماكينة ATM قبل صرف النقود). <span class="text-rose-400 text-xs block mt-1">⚠️ قاعدة هامة: Technology without process = Automated Chaos (التكنولوجيا بدون تنظيم عمليات تؤدي لفوضى مؤتمتة).</span>
+                        </li>
+                        <li class="p-3 bg-slate-800 rounded border border-emerald-700/60">
+                            <strong class="text-emerald-400 en-text">5. People (العنصر البشري - الركن الأهم):</strong> يشمل المستخدمين، المبرمجين، والمديرين. <span class="text-emerald-300 font-semibold">يُعد الركن الأكثر أهمية والأكثر صعوبة في التنبؤ بسلوكه (Most unpredictable)</span> لأن البشر يخطئون ويقاومون التغيير عكس الأجهزة والبرمجيات المنضبطة.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Concept 1.3 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">3. Value Chain & Competitive Advantage (سلسلة القيمة والميزة التنافسية)</h3>
+                    <p class="en-text text-xs text-slate-300">Organizations invest millions in IS to achieve Competitive Advantage through Cost Leadership (lower costs) or Differentiation (unique, faster service).</p>
+                    <p class="text-sm text-slate-300">تستثمر الشركات الملايين في نظم المعلومات لتحقيق <strong>الميزة التنافسية (Competitive Advantage)</strong> عبر خفض التكاليف التشغيلية أو تقديم خدمة أسرع وأفضل من المنافسين. وتنقسم أنشطة المؤسسة في <strong>سلسلة القيمة (Value Chain)</strong> إلى:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                        <div class="p-3 bg-slate-800 rounded border border-slate-700">
+                            <strong class="text-indigo-300 block mb-1">Primary Activities (الأنشطة الأساسية):</strong>
+                            الأنشطة المرتبطة مباشرة بالمنتج والعميل: اللوجستيات والتوريد (Inbound/Outbound Logistics)، التشغيل والإنتاج (Operations)، التسويق والمبيعات (Marketing & Sales)، وخدمة ما بعد البيع (Service).
+                        </div>
+                        <div class="p-3 bg-slate-800 rounded border border-slate-700">
+                            <strong class="text-indigo-300 block mb-1">Support Activities (الأنشطة الداعمة):</strong>
+                            الأنشطة التي تدعم استمرار الشركة: الموارد البشرية (HR)، المشتريات (Procurement)، التطوير التكنولوجي (Tech Development)، والبنية التحتية الإدارية والمالية.
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ==================== LECTURE 2 ==================== -->
+            <article id="lec2-detail" class="bg-slate-800 rounded-xl p-6 md:p-8 border border-slate-700 shadow-xl space-y-6">
+                <div class="border-b border-slate-700 pb-4">
+                    <span class="text-xs font-bold bg-indigo-900/80 text-indigo-300 px-3 py-1 rounded-full">Lecture 02</span>
+                    <h2 class="text-2xl font-extrabold text-white mt-2">Types of Information Systems: TPS vs MIS</h2>
+                    <p class="text-sm text-indigo-300">أنواع نظم المعلومات: نظم معالجة المعاملات مقابل نظم المعلومات الإدارية</p>
+                </div>
+
+                <!-- Concept 2.1 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">1. Detailed Comparison: TPS vs MIS (المقارنة الشاملة)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-right border-collapse">
+                            <thead>
+                                <tr class="bg-slate-800 text-indigo-300 border-b border-slate-700">
+                                    <th class="p-3">وجه المقارنة</th>
+                                    <th class="p-3">TPS (Transaction Processing System)</th>
+                                    <th class="p-3">MIS (Management Information System)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800 text-slate-300">
+                                <tr>
+                                    <td class="p-3 font-bold text-slate-200">الهدف الرئيسي</td>
+                                    <td class="p-3">تسجيل العمليات والمعاملات اليومية الروتينية لحظة حدوثها (Real-time).</td>
+                                    <td class="p-3">تجميع بيانات الـ TPS وتحويلها لتقارير دورية مجمعة لدعم اتخاذ القرار.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-bold text-slate-200">المستخدمون</td>
+                                    <td class="p-3">موظفو الصف الأول والكاشير والعملاء (Operational / Frontline Staff).</td>
+                                    <td class="p-3">الإدارة الوسطى والمديرون (Middle Managers).</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-bold text-slate-200">طبيعة البيانات</td>
+                                    <td class="p-3">تفصيلية جداً (Granular / Detailed) لكل فاتورة أو عملية على حدة.</td>
+                                    <td class="p-3">مجمعة ومُلخصة (Aggregated / Summarized) وتاريخية.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-bold text-slate-200">أمثلة واقعية</td>
+                                    <td class="p-3">كاشير السوبرماركت (POS)، ماكينة ATM، حجز تذاكر الطيران.</td>
+                                    <td class="p-3">تقرير المبيعات الشهري للفروع، تقرير نسب غياب الطلاب بالجامعة.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-bold text-slate-200">أثر التعطل</td>
+                                    <td class="p-3 text-rose-400">توقف فوري وكامل للعمليات اليومية والبيع في المؤسسة.</td>
+                                    <td class="p-3 text-amber-400">تأخر في الرؤية الإدارية والتخطيط دون توقف البيع اللحظي.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Concept 2.2 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">2. TPS Processing Cycle & GIGO Rule (دورة المعاملة وقاعدة GIGO)</h3>
+                    <p class="text-sm text-slate-300">تمر أي معاملة داخل نظام الـ TPS بأربع خطوات متتالية:</p>
+                    <div class="bg-slate-800 p-3 rounded-lg text-center font-bold text-indigo-300 en-text text-sm">
+                        1. Capture (التقاط البيانات) ➔ 2. Validate (التحقق من صحتها) ➔ 3. Record (تسجيلها بقاعدة البيانات) ➔ 4. Confirm (طباعة الإيصال/التأكيد)
+                    </div>
+                    <div class="p-3 bg-rose-950/40 border border-rose-800/60 rounded-lg text-sm text-rose-200">
+                        <strong>قاعدة الاعتمادية (Garbage In, Garbage Out - GIGO):</strong> يعتمد نظام الـ MIS كلياً على البيانات القادمة من الـ TPS. إذا تم إدخال بيانات خاطئة في الـ TPS، سيقوم الـ MIS بإنتاج تقارير إدارية مضللة تؤدي لقرارات خاطئة.
+                    </div>
+                </div>
+            </article>
+
+            <!-- ==================== LECTURE 3 ==================== -->
+            <article id="lec3-detail" class="bg-slate-800 rounded-xl p-6 md:p-8 border border-slate-700 shadow-xl space-y-6">
+                <div class="border-b border-slate-700 pb-4">
+                    <span class="text-xs font-bold bg-indigo-900/80 text-indigo-300 px-3 py-1 rounded-full">Lecture 03</span>
+                    <h2 class="text-2xl font-extrabold text-white mt-2">How the Web Works, HTTP & DNS</h2>
+                    <p class="text-sm text-indigo-300">كيف تعمل شبكة الويب، بروتوكولات الاتصال، ونظام أسماء النطاقات</p>
+                </div>
+
+                <!-- Concept 3.1 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">1. Client-Server Model & DNS (نموذج العميل والخادم ودليل الإنترنت)</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        عندما تفتح المتصفح (<strong>Client</strong>) وتكتب عنوان موقع مثل <code>pua.edu.eg</code>، لا تفهم الشبكة الأسماء النصية بل تفهم الأرقام فقط (<strong>IP Address</strong> مثل <code>192.168.1.1</code>). هنا يتدخل <strong>DNS (Domain Name System)</strong> الذي يعمل كـ <strong>"دليل هاتف الإنترنت" (Phonebook of the Internet)</strong> ليترجم الاسم إلى عنوان IP، ثم يتصل المتصفح بالخادم (<strong>Server</strong>) لطلب الصفحة.
+                    </p>
+                </div>
+
+                <!-- Concept 3.2 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">2. URL Anatomy & HTTP vs HTTPS (تشريح الرابط والتشفير)</h3>
+                    <div class="p-3 bg-slate-800 rounded-lg en-text text-xs md:text-sm font-mono text-center text-emerald-400 border border-slate-700">
+                        https:// <span class="text-amber-300">pua.edu.eg</span> <span class="text-indigo-300">/courses/ds101</span> <span class="text-rose-300">?year=2026</span>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-1 pr-2">
+                        <li>• <strong>Protocol (<code>https://</code>):</strong> البروتوكول المسؤول عن نقل البيانات. حرف <strong>S</strong> يرمز إلى <strong>Secure</strong> ويعني تشفير البيانات عبر شهادات <strong>SSL/TLS</strong> لحماية كلمات المرور والبطاقات البنكية من التجسس.</li>
+                        <li>• <strong>Domain Name (<code>pua.edu.eg</code>):</strong> اسم النطاق الخاص بالموقع.</li>
+                        <li>• <strong>Path (<code>/courses/ds101</code>):</strong> المسار المحدد للصفحة أو الملف داخل السيرفر.</li>
+                        <li>• <strong>Query String (<code>?year=2026</code>):</strong> يبدأ بعلامة الاستفهام ويُستخدم لإرسال متغيرات ومعلمات إضافية للصفحة.</li>
+                    </ul>
+                </div>
+
+                <!-- Concept 3.3 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">3. HTTP Methods & Status Codes (طرق الطلب وأكواد الاستجابة)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 space-y-2">
+                            <div class="font-bold text-indigo-300 text-sm">HTTP Methods (أنواع الطلبات):</div>
+                            <p>• <strong>GET:</strong> لطلب وجلب البيانات والصفحات لعرضها فقط (مثل فتح صفحة مقال).</p>
+                            <p>• <strong>POST:</strong> لإرسال بيانات جديدة إلى السيرفر لمعالجتها (مثل تسجيل الدخول أو ملء استمارة).</p>
+                            <p>• <strong>PUT:</strong> لتحديث بيانات موجودة مسبقاً على السيرفر.</p>
+                            <p>• <strong>DELETE:</strong> لحذف مورد أو ملف من السيرفر.</p>
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 space-y-2">
+                            <div class="font-bold text-indigo-300 text-sm">HTTP Status Codes (أكواد الرد):</div>
+                            <p>• <strong class="text-emerald-400">200 OK:</strong> تم الطلب بنجاح والسيرفر أرسل الصفحة.</p>
+                            <p>• <strong class="text-amber-400">301 Moved Permanently:</strong> تم نقل الصفحة لعنوان جديد.</p>
+                            <p>• <strong class="text-rose-400">404 Not Found (عائلة 4xx = خطأ العميل):</strong> الرابط خطأ أو الصفحة غير موجودة.</p>
+                            <p>• <strong class="text-rose-500">500 Internal Server Error (عائلة 5xx = خطأ السيرفر):</strong> عطل برمجي أو فني داخل السيرفر نفسه.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ==================== LECTURE 4 ==================== -->
+            <article id="lec4-detail" class="bg-slate-800 rounded-xl p-6 md:p-8 border border-slate-700 shadow-xl space-y-6">
+                <div class="border-b border-slate-700 pb-4">
+                    <span class="text-xs font-bold bg-indigo-900/80 text-indigo-300 px-3 py-1 rounded-full">Lecture 04</span>
+                    <h2 class="text-2xl font-extrabold text-white mt-2">Web Servers, Hosting & High Traffic Solutions</h2>
+                    <p class="text-sm text-indigo-300">خوادم الويب، أنواع الاستضافة، وحلول استيعاب ضغط الزيارات الضخم</p>
+                </div>
+
+                <!-- Concept 4.1 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">1. Static vs Dynamic Web Pages (الصفحات الثابتة مقابل الديناميكية)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                            <strong class="text-emerald-400 block mb-1">Static Pages (الصفحات الثابتة):</strong>
+                            ملفات HTML/CSS جاهزة ومخزنة على السيرفر، تُرسل لكل الزوار بنفس الشكل تماماً دون معالجة. تمتاز بأنها <strong>سريعة جداً وآمنة</strong> (مثل صفحات التعريف بالشركات).
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                            <strong class="text-indigo-400 block mb-1">Dynamic Pages (الصفحات الديناميكية):</strong>
+                            صفحات تتولد لحظياً في السيرفر (عبر PHP أو Python أو Node.js) بناءً على بيانات كل مستخدم من قاعدة البيانات (مثل صفحتك الشخصية على فيسبوك أو أمازون).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concept 4.2 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">2. Apache vs Nginx Web Servers (مقارنة أشهر خوادم الويب)</h3>
+                    <p class="text-sm text-slate-300">
+                        • <strong>Apache:</strong> يعتمد نظام إنشاء عملية منفصلة لكل زائر (Process-per-request). ميزة قوية فيه هي دعم التعديل السريع لكل مجلد عبر ملفات <code>.htaccess</code>، لكنه يستهلك ذاكرة RAM عالية ويهبط أداؤه عند دخول آلاف الزوار معاً.<br>
+                        • <strong>Nginx:</strong> يعتمد معمارية حديثة قائمة على الأحداث (<strong>Event-driven asynchronous architecture</strong>)، مما يجعله يحل مشكلة <strong>C10K Problem</strong> (التعامل مع 10,000+ اتصال متزامن) باستهلاك ذاكرة منخفض وثابت.<br>
+                        • <strong>النمط الحديث (Modern Hybrid Pattern):</strong> يُوضع <strong>Nginx في المقدمة</strong> (كـ Reverse Proxy) لخدمة الملفات الثابتة السريعة وتوزيع الضغط، ويُترك <strong>Apache في الخلفية</strong> لمعالجة الكود الديناميكي المعقد.
+                    </p>
+                </div>
+
+                <!-- Concept 4.3 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">3. Handling High Traffic (كيف تصمد المواقع أمام ملايين الزوار؟)</h3>
+                    <ul class="text-sm text-slate-300 space-y-2 pr-2">
+                        <li>• <strong>Load Balancer (موزع الأحمال):</strong> يقف أمام السيرفرات ويوزع الزيارات الواردة بالتساوي بين عدة خوادم حتى لا ينهار سيرفر واحد.</li>
+                        <li>• <strong>Auto-Scaling (التوسع الذاتي):</strong> ميزة سحابية تضيف سيرفرات جديدة تلقائياً في ثوانٍ عند زيادة الضغط (مثل يوم الجمعة البيضاء) وتغلقها عند هدوء الزيارات لتوفير التكلفة.</li>
+                        <li>• <strong>CDN (Content Delivery Network):</strong> شبكة سيرفرات موزعة حول العالم (Edge Locations) تحفظ نسخة من الصور والملفات في أقرب بلد للمستخدم لتقليل زمن التحميل.</li>
+                        <li>• <strong>Caching (التخزين المؤقت):</strong> حفظ نتيجة الاستعلامات المتكررة في الذاكرة السريعة (RAM) ليكون الرد أسرع بـ 1000 مرة من الرجوع لقاعدة البيانات في كل مرة.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ==================== LECTURE 5 ==================== -->
+            <article id="lec5-detail" class="bg-slate-800 rounded-xl p-6 md:p-8 border border-slate-700 shadow-xl space-y-6">
+                <div class="border-b border-slate-700 pb-4">
+                    <span class="text-xs font-bold bg-indigo-900/80 text-indigo-300 px-3 py-1 rounded-full">Lecture 05</span>
+                    <h2 class="text-2xl font-extrabold text-white mt-2">Cloud Computing & Virtualization</h2>
+                    <p class="text-sm text-indigo-300">الحوسبة السحابية، المحاكاة الافتراضية، والحاويات</p>
+                </div>
+
+                <!-- Concept 5.1 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">1. Financial Shift: CapEx vs OpEx (التحول المالي للسحابة)</h3>
+                    <p class="text-sm text-slate-300">
+                        قبل السحابة، كانت الشركات تضطر لدفع مبالغ ضخمة مقدماً لشراء سيرفرات ومراكز بيانات وهو ما يُعرف بالنفقات الرأسمالية (<strong>CapEx - Capital Expenditure</strong>). مع الحوسبة السحابية، تحول النموذج إلى نفقات تشغيلية مرنة (<strong>OpEx - Operational Expenditure</strong>) بنظام <strong>Pay-as-you-go</strong> (ادفع فقط مقابل ما تستهلكه بالساعة أو الثانية)، مما خفّض تكاليف البنية التحتية بنسبة تقارب 40%.
+                    </p>
+                </div>
+
+                <!-- Concept 5.2 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">2. Cloud Service Models (نماذج الخدمات السحابية الثلاثة)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                            <strong class="text-indigo-400 text-sm block mb-1">IaaS (Infrastructure as a Service)</strong>
+                            تستأجر العتاد الافتراضي والشبكة والتخزين (مثل <strong>AWS EC2</strong>). المزود يدير الهاردوير، <strong>وأنت مسؤول عن تثبيت وإدارة نظام التشغيل (OS) والتطبيقات</strong>.
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                            <strong class="text-indigo-400 text-sm block mb-1">PaaS (Platform as a Service)</strong>
+                            يوفر المزود نظام التشغيل وبيئة التشغيل جاهزة (مثل <strong>Google App Engine / Heroku</strong>). <strong>أنت تكتب الكود وترفعه فقط</strong> دون القلق بشأن السيرفرات.
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                            <strong class="text-indigo-400 text-sm block mb-1">SaaS (Software as a Service)</strong>
+                            تطبيقات برمجية جاهزة بالكامل للاستخدام عبر المتصفح دون أي برمجة أو إدارة سيرفرات (مثل <strong>Gmail, Google Workspace, Microsoft 365</strong>).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concept 5.3 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">3. Virtual Machines (VMs) vs Containers (الحاويات)</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        • <strong>Virtual Machines (VMs):</strong> تعتمد على برنامج <strong>Hypervisor</strong> (Type 1 يثبت مباشرة على الهاردوير مثل VMware ESXi، و Type 2 يعمل فوق نظام تشغيل مثل VirtualBox). كل VM تحتوي على <strong>نظام تشغيل كامل مستقل (Guest OS)</strong> لذا حجمها بالجيجابايت وتستغرق دقائق للإقلاع.<br>
+                        • <strong>Containers (مثل Docker):</strong> تقنية أحدث وأخف؛ حيث تتشارك جميع الحاويات <strong>نواة نظام التشغيل المضيف (Host OS Kernel)</strong>، لذا حجمها بالميجابايت وتقلع في <strong>أقل من ثانية</strong>.<br>
+                        • <strong>Serverless (FaaS):</strong> ترفع دالة برمجية صغيرة فقط وتدفع مقابل زمن تنفيذها الفعلي بالميلي ثانية (Milliseconds).
+                    </p>
+                </div>
+            </article>
+
+            <!-- ==================== LECTURE 6 ==================== -->
+            <article id="lec6-detail" class="bg-slate-800 rounded-xl p-6 md:p-8 border border-slate-700 shadow-xl space-y-6">
+                <div class="border-b border-slate-700 pb-4">
+                    <span class="text-xs font-bold bg-indigo-900/80 text-indigo-300 px-3 py-1 rounded-full">Lecture 06</span>
+                    <h2 class="text-2xl font-extrabold text-white mt-2">SDLC Phases & Agile vs Waterfall</h2>
+                    <p class="text-sm text-indigo-300">دورة حياة تطوير النظم ومنهجيات إدارة المشاريع البرمجية</p>
+                </div>
+
+                <!-- Concept 6.1 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">1. The 6 Phases of SDLC (مراحل دورة حياة تطوير النظام الست)</h3>
+                    <ol class="list-decimal list-inside text-sm text-slate-300 space-y-2 pr-2">
+                        <li><strong>Planning (التخطيط):</strong> تحديد نطاق المشروع، دراسة الجدوى المالية والزمنية، وتحليل المخاطر.</li>
+                        <li><strong>Analysis (التحليل):</strong> دراسة احتياجات المستخدم وإصدار وثيقة المتطلبات (Requirements Document). تنقسم المتطلبات إلى:
+                            <span class="block text-xs text-indigo-300 pr-4 mt-1">• <strong>Functional Requirements (وظيفية):</strong> ماذا يفعل النظام (What) مثل: زر تسجيل الدخول أو البحث.</span>
+                            <span class="block text-xs text-emerald-300 pr-4">• <strong>Non-Functional Requirements (غير وظيفية):</strong> جودة وأداء النظام (How) مثل: سرعة فتح الصفحة في ثانيتين أو الأمان.</span>
+                        </li>
+                        <li><strong>Design (التصميم):</strong> رسم معمارية النظام، تصميم قواعد البيانات (Database Schema)، وتصميم واجهات المستخدم (UI/UX).</li>
+                        <li><strong>Implementation (التنفيذ والبرمجة):</strong> تحويل التصميمات إلى كود برمجي فعلي بواسطة المطورين.</li>
+                        <li><strong>Testing (الاختبار):</strong> التأكد من خلو النظام من الأخطاء عبر مستويات: Unit Testing (اختبار الوحدات)، Integration Testing (التكامل)، System Testing، وأخيراً <strong>UAT (User Acceptance Testing)</strong> حيث يختبر العميل النظام قبل الاستلام.</li>
+                        <li><strong>Maintenance (الصيانة والتطوير المستمر):</strong> إصلاح الأخطاء بعد الإطلاق وإضافة تحديثات. <span class="text-amber-400 font-bold">تستهلك هذه المرحلة وحدها 60% من إجمالي تكلفة النظام طوال عمره!</span></li>
+                    </ol>
+                </div>
+
+                <!-- Concept 6.2 -->
+                <div class="bg-slate-900/70 p-5 rounded-lg border border-slate-700/80 space-y-3">
+                    <h3 class="text-lg font-bold text-amber-400">2. Waterfall vs Agile Methodologies (الشلال مقابل المنهجية المرنة)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                            <strong class="text-rose-400 block mb-1">Waterfall (النموذج الخطي/الشلال):</strong>
+                            يسير في خطوات متتالية صارمة؛ لا تبدأ مرحلة إلا بانتهاء السابقة. لا يرحب بالتغييرات أثناء التنفيذ، ويُستخدم في المشاريع الحكومية أو الطبية ذات المتطلبات الثابتة 100%.
+                        </div>
+                        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                            <strong class="text-emerald-400 block mb-1">Agile (المنهجية المرنة):</strong>
+                            يقسم المشروع إلى دورات قصيرة متكررة تسمى <strong>Sprints</strong> (من أسبوعين إلى 4 أسابيع). يرحب بتعديلات العميل في أي وقت عبر إضافتها لقائمة المهام (Product Backlog). يركز على تسليم برمجيات شغالة بسرعة بدلاً من التوثيق المطول.
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 pt-1">
+                        <strong>أشهر أطر Agile:</strong> <strong>Scrum</strong> (يعتمد على Sprints زمنية محددة وأدوار مثل Product Owner و Scrum Master) و <strong>Kanban</strong> (يعتمد على التدفق المستمر للمهام عبر لوحة مرئية دون Sprints محددة).
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 2: INTERACTIVE QUIZ ENGINE                        -->
+        <!-- ========================================================= -->
+        <div id="section-quiz" class="hidden">
+            <!-- Progress Bar -->
+            <div id="quiz-progress" class="hidden justify-between items-center bg-slate-800 p-3 rounded-lg border border-slate-700 mb-4">
+                <span class="text-xs text-slate-400">Question Progress / تقدم الاختبار:</span>
+                <span class="text-xs font-bold text-indigo-300"><span id="current-q-num">1</span> / <span id="total-q-num">10</span></span>
+            </div>
+
+            <!-- Selection Screen -->
+            <div id="selection-screen" class="bg-slate-800 rounded-xl p-6 border border-slate-700 shadow-xl my-2">
+                <h2 class="text-xl font-bold mb-4 text-slate-200 border-b border-slate-700 pb-3">Select a Topic to Start Quiz / اختر المحاضرة للاختبار:</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <button onclick="startQuiz('all')" class="p-4 bg-indigo-600 hover:bg-indigo-500 rounded-lg font-bold text-right transition flex justify-between items-center col-span-1 md:col-span-2 shadow-lg">
+                        <div>
+                            <div class="text-lg">🔥 Full Comprehensive Question Bank</div>
+                            <div class="text-xs text-indigo-200 mt-1">بنك الأسئلة الشامل لجميع المحاضرات (1-6)</div>
+                        </div>
+                        <span class="text-xs bg-indigo-800 px-2.5 py-1 rounded" id="all-count-badge">All Questions</span>
+                    </button>
+                    <button onclick="startQuiz('lec1')" class="p-4 bg-slate-700 hover:bg-slate-600 rounded-lg text-right transition border border-slate-600 flex justify-between items-center">
+                        <div>
+                            <div class="font-bold text-indigo-300">Lecture 1: Intro & 5 Pillars</div>
+                            <div class="text-xs text-slate-400 mt-1">Data Pipeline & Core Pillars</div>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Quiz</span>
+                    </button>
+                    <button onclick="startQuiz('lec2')" class="p-4 bg-slate-700 hover:bg-slate-600 rounded-lg text-right transition border border-slate-600 flex justify-between items-center">
+                        <div>
+                            <div class="font-bold text-indigo-300">Lecture 2: TPS vs MIS</div>
+                            <div class="text-xs text-slate-400 mt-1">Operational vs Managerial Systems</div>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Quiz</span>
+                    </button>
+                    <button onclick="startQuiz('lec3')" class="p-4 bg-slate-700 hover:bg-slate-600 rounded-lg text-right transition border border-slate-600 flex justify-between items-center">
+                        <div>
+                            <div class="font-bold text-indigo-300">Lecture 3: Web Basics & DNS</div>
+                            <div class="text-xs text-slate-400 mt-1">HTTP Methods & Status Codes</div>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Quiz</span>
+                    </button>
+                    <button onclick="startQuiz('lec4')" class="p-4 bg-slate-700 hover:bg-slate-600 rounded-lg text-right transition border border-slate-600 flex justify-between items-center">
+                        <div>
+                            <div class="font-bold text-indigo-300">Lecture 4: Web Servers & Traffic</div>
+                            <div class="text-xs text-slate-400 mt-1">Nginx vs Apache & CDN Solutions</div>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Quiz</span>
+                    </button>
+                    <button onclick="startQuiz('lec5')" class="p-4 bg-slate-700 hover:bg-slate-600 rounded-lg text-right transition border border-slate-600 flex justify-between items-center">
+                        <div>
+                            <div class="font-bold text-indigo-300">Lecture 5: Cloud Computing</div>
+                            <div class="text-xs text-slate-400 mt-1">IaaS/PaaS/SaaS & Containers</div>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Quiz</span>
+                    </button>
+                    <button onclick="startQuiz('lec6')" class="p-4 bg-slate-700 hover:bg-slate-600 rounded-lg text-right transition border border-slate-600 flex justify-between items-center">
+                        <div>
+                            <div class="font-bold text-indigo-300">Lecture 6: SDLC & Agile vs Waterfall</div>
+                            <div class="text-xs text-slate-400 mt-1">SDLC Phases & Agile Frameworks</div>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Quiz</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div id="quiz-screen" class="hidden bg-slate-800 rounded-xl p-6 border border-slate-700 shadow-xl my-2">
+                <div id="q-category" class="text-xs font-semibold text-indigo-400 uppercase tracking-wider mb-2"></div>
+                
+                <!-- Question Block (English + Arabic) -->
+                <div class="mb-6 space-y-1">
+                    <h3 id="q-text-en" class="en-text text-lg md:text-xl font-bold text-slate-100"></h3>
+                    <p id="q-text-ar" class="text-sm text-slate-400 font-medium"></p>
+                </div>
+
+                <div id="options-container" class="space-y-3"></div>
+
+                <div class="mt-4">
+                    <button onclick="toggleHint()" class="text-xs text-indigo-400 hover:underline focus:outline-none">💡 Need a hint? / هل تحتاج لتلميح؟</button>
+                    <div id="hint-text" class="hidden mt-2 p-3 bg-slate-700/60 text-slate-300 text-sm rounded-lg border border-slate-600"></div>
+                </div>
+
+                <!-- Explanation Box -->
+                <div id="explanation-box" class="hidden mt-6 p-4 rounded-lg border text-sm leading-relaxed transition-all"></div>
+
+                <div class="mt-6 flex justify-end">
+                    <button id="next-btn" onclick="nextQuestion()" class="hidden px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 rounded-lg font-bold text-white transition shadow-lg">
+                        Next Question / السؤال التالي ⬅️
+                    </button>
+                </div>
+            </div>
+
+            <!-- Result Screen -->
+            <div id="result-screen" class="hidden bg-slate-800 rounded-xl p-8 border border-slate-700 shadow-xl my-2 text-center">
+                <div class="text-5xl mb-4" id="result-emoji">🎉</div>
+                <h2 class="text-2xl font-bold text-slate-100 mb-2">Quiz Completed! / انتهى الاختبار</h2>
+                <p class="text-slate-400 mb-6">Your Final Result / درجتك الإجمالية:</p>
+
+                <div class="text-4xl font-extrabold text-indigo-400 mb-6" id="final-score">0 / 0</div>
+                <div id="score-feedback" class="p-4 rounded-lg bg-slate-700 text-slate-200 mb-6 text-sm leading-relaxed"></div>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button id="review-wrong-btn" onclick="reviewWrongAnswers()" class="hidden px-6 py-3 bg-amber-600 hover:bg-amber-500 rounded-lg font-bold text-white transition">
+                        📝 Review Mistakes & Explanations / مراجعة الأخطاء
+                    </button>
+                    <button onclick="resetQuiz()" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-lg font-bold text-white transition">
+                        🔄 Back to Topics / اختيار موضوع آخر
+                    </button>
+                </div>
+
+                <div id="wrong-answers-list" class="hidden mt-8 text-right space-y-4 border-t border-slate-700 pt-6">
+                    <h3 class="text-lg font-bold text-amber-400 mb-4">Mistakes Breakdown / تقرير الأخطاء:</h3>
+                    <div id="wrong-items-container" class="space-y-4"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- MODEL ANSWERS MODAL WINDOW -->
+    <div id="model-answers-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex justify-center items-center p-4">
+        <div class="bg-slate-800 rounded-xl border border-slate-700 shadow-2xl max-w-3xl w-full max-h-[85vh] flex flex-col">
+            <div class="p-4 border-b border-slate-700 flex justify-between items-center bg-slate-850 rounded-t-xl">
+                <div>
+                    <h3 class="text-lg font-bold text-amber-400">📋 Model Answers & Explanations (الإجابات النموذجية بالكامل)</h3>
+                    <p class="text-xs text-slate-400">Complete bilingual question bank answers with detailed justifications</p>
+                </div>
+                <button onclick="closeModelAnswersModal()" class="text-slate-400 hover:text-white bg-slate-700 hover:bg-slate-600 w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                    ✕
+                </button>
+            </div>
+            <div id="modal-answers-container" class="p-6 overflow-y-auto flex-grow space-y-6 text-sm"></div>
+            <div class="p-4 border-t border-slate-700 bg-slate-850 rounded-b-xl flex justify-end">
+                <button onclick="closeModelAnswersModal()" class="px-5 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-white font-bold text-xs transition">
+                    Close / إغلاق النافذة
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 border-t border-slate-700 p-4 text-center text-xs text-slate-500">
+        DS101 Fundamentals of Information Systems - Complete Study Guide & Interactive Quiz
+    </footer>
+
+    <!-- JavaScript Data and Logic -->
+    <script>
+        const allQuestions = [
+            // --- Lecture 1 ---
+            {
+                cat: "Lecture 1: Intro & 5 Pillars",
+                q_en: "What is the correct sequence of the data processing pipeline towards decision-making?",
+                q_ar: "ما هو الترتيب الصحيح لخطوات مسار معالجة البيانات للوصول للقرار في نظم المعلومات؟",
+                options: [
+                    { 
+                        en: "Data ➔ Information ➔ Knowledge", 
+                        ar: "البيانات ➔ المعلومات ➔ المعرفة", 
+                        isCorrect: true, 
+                        explanation_en: "Raw data lacks context. When organized, it becomes meaningful information. Applying information to make decisions yields knowledge.",
+                        explanation_ar: "تأتي البيانات كحقائق خام بدون سياق، ثم تنظم لمنحها سياقاً فتصبح معلومات، وأخيراً تستخدم لتوليد المعرفة لاتخاذ القرار."
+                    },
+                    { en: "Information ➔ Data ➔ Knowledge", ar: "المعلومات ➔ البيانات ➔ المعرفة", isCorrect: false },
+                    { en: "Knowledge ➔ Information ➔ Data", ar: "المعرفة ➔ المعلومات ➔ البيانات", isCorrect: false },
+                    { en: "Data ➔ Knowledge ➔ Information", ar: "البيانات ➔ المعرفة ➔ المعلومات", isCorrect: false }
+                ],
+                hint: "Data is raw ➔ Information adds context ➔ Knowledge applies understanding."
+            },
+            {
+                cat: "Lecture 1: Intro & 5 Pillars",
+                q_en: "Which of the 5 core pillars of Information Systems is considered the most important and unpredictable in behavior?",
+                q_ar: "أي من الأركان الخمسة لنظم المعلومات يمثل الركن الأكثر أهمية وغير متوقع في سلوكه؟",
+                options: [
+                    { 
+                        en: "People (Human Element)", 
+                        ar: "People (العنصر البشري)", 
+                        isCorrect: true, 
+                        explanation_en: "Hardware and software follow deterministic rules, whereas human behavior (People) is complex, dynamic, and unpredictable.",
+                        explanation_ar: "العنصر البشري (People) هو الأكثر أهمية وتغيراً في النظام مقارنة بالأجهزة والبرمجيات المنتظمة المبرمجة."
+                    },
+                    { en: "Hardware", ar: "الأجهزة المادية", isCorrect: false },
+                    { en: "Software", ar: "البرمجيات والتطبيقات", isCorrect: false },
+                    { en: "Processes", ar: "العمليات والإجراءات", isCorrect: false }
+                ],
+                hint: "Includes users, managers, and developers."
+            },
+            {
+                cat: "Lecture 1: Intro & 5 Pillars",
+                q_en: "Why do modern organizations invest heavily in Information Systems (IS)?",
+                q_ar: "لماذا تستثمر الشركات والمؤسسات مبالغ ضخمة في بناء نظم المعلومات (IS)؟",
+                options: [
+                    { 
+                        en: "To achieve Competitive Advantage and cost reduction", 
+                        ar: "لتحقيق الميزة التنافسية (Competitive Advantage) وخفض التكاليف", 
+                        isCorrect: true, 
+                        explanation_en: "IS helps organizations reduce operational costs, differentiate products/services, and achieve a strategic competitive advantage.",
+                        explanation_ar: "تستثمر الشركات في نظم المعلومات لخفض التكاليف (Low-cost) والتميز بالخدمات للوصول إلى الميزة التنافسية."
+                    },
+                    { en: "Only to fulfill mandatory government compliance", ar: "فقط للالتزام بالشروط الحكومية", isCorrect: false },
+                    { en: "To eliminate all human employees completely", ar: "لاستبدال جميع الموظفين تماماً", isCorrect: false },
+                    { en: "To replace outdated hardware without business goals", ar: "لاستبدال الأجهزة فقط بدون أهداف تجارية", isCorrect: false }
+                ],
+                hint: "Focuses on outperforming competitors and optimizing business operations."
+            },
+            {
+                cat: "Lecture 1: Intro & 5 Pillars",
+                q_en: "What happens when an organization implements advanced technology without well-defined processes and trained people?",
+                q_ar: "ماذا يحدث عندما تطبق مؤسسة تكنولوجيا متقدمة دون وجود عمليات منظمة وأفراد مدربين؟",
+                options: [
+                    { 
+                        en: "Automated Chaos", 
+                        ar: "فوضى مؤتمتة (Automated Chaos)", 
+                        isCorrect: true, 
+                        explanation_en: "Technology alone cannot fix broken workflows; automating bad processes simply creates automated chaos.",
+                        explanation_ar: "التكنولوجيا وحدها لا تصلح الفوضى الإدارية، بل تحولها إلى فوضى سريعة ومؤتمتة."
+                    },
+                    { en: "Instant 100% profit increase", ar: "زيادة فورية في الأرباح بنسبة 100%", isCorrect: false },
+                    { en: "Automatic conversion of data into knowledge", ar: "تحول تلقائي للبيانات إلى معرفة", isCorrect: false },
+                    { en: "Zero maintenance costs", ar: "انعدام تكاليف الصيانة", isCorrect: false }
+                ],
+                hint: "Tech without process = automated ..."
+            },
+
+            // --- Lecture 2 ---
+            {
+                cat: "Lecture 2: TPS vs MIS",
+                q_en: "What is the primary difference between a Transaction Processing System (TPS) and a Management Information System (MIS)?",
+                q_ar: "ما الفرق الجوهري بين نظام المعاملات (TPS) ونظام المعلومات الإدارية (MIS)؟",
+                options: [
+                    { 
+                        en: "TPS captures real-time daily operations, while MIS generates aggregated periodic reports for managers.", 
+                        ar: "TPS يسجل العمليات اللحظية تفصيلياً، بينما MIS يقدم تقارير مجمعة ودورية للمديرين", 
+                        isCorrect: true, 
+                        explanation_en: "TPS handles operational real-time transactions (e.g., cashier POS). MIS aggregates this data into summary reports for middle management decisions.",
+                        explanation_ar: "الـ TPS يلتقط العمليات اليومية اللحظية تفصيلياً، بينما MIS يجمع هذه البيانات في تقارير إدارية لتطوير القرارات."
+                    },
+                    { en: "TPS is used by CEOs only, while MIS is for operational staff", ar: "TPS للمدير التنفيذي فقط و MIS لموظفي الصف الأول", isCorrect: false },
+                    { en: "TPS processes annual data, while MIS works every second", ar: "TPS يعمل سنوياً و MIS يعمل كل ثانية", isCorrect: false },
+                    { en: "There is no functional difference between them", ar: "لا يوجد أي فارق وظيفي بينهما", isCorrect: false }
+                ],
+                hint: "Think of POS Cashier (TPS) vs Monthly Sales Report (MIS)."
+            },
+            {
+                cat: "Lecture 2: TPS vs MIS",
+                q_en: "What happens to MIS reports if incorrect data is entered into the TPS?",
+                q_ar: "ماذا يحدث لنظام الـ MIS الإداري في حال إدخال بيانات خاطئة في نظام الـ TPS التشغيلي؟",
+                options: [
+                    { 
+                        en: "Misleading MIS reports leading to flawed management decisions (GIGO)", 
+                        ar: "توليد تقارير مضللة تؤدي لقرارات إدارية خاطئة (مبدأ GIGO)", 
+                        isCorrect: true, 
+                        explanation_en: "Based on 'Garbage In, Garbage Out' (GIGO), MIS relies entirely on accurate TPS inputs. Faulty inputs produce invalid managerial reports.",
+                        explanation_ar: "وفق مبدأ Garbage In Garbage Out، يعتمد الـ MIS على مدخلات الـ TPS، والإدخال الخاطئ ينتج تقارير مضللة وقرارات خاطئة."
+                    },
+                    { en: "MIS will automatically fix and auto-correct the errors", ar: "يقوم الـ MIS بتصحيح الأخطاء تلقائياً", isCorrect: false },
+                    { en: "The entire database gets permanently deleted", ar: "تتمسح قاعدة البيانات بالكامل", isCorrect: false },
+                    { en: "Data automatically transforms into perfect knowledge", ar: "تتحول البيانات تلقائياً لمعرفة نموذجية", isCorrect: false }
+                ],
+                hint: "Remember the Garbage In, Garbage Out principle."
+            },
+            {
+                cat: "Lecture 2: TPS vs MIS",
+                q_en: "Which system level is directly impacted and halted immediately if a supermarket's TPS crashes?",
+                q_ar: "ما النتيجة المباشرة والفورية لتعطل نظام الـ TPS في سوبرماركت كبير؟",
+                options: [
+                    { 
+                        en: "Daily sales, checkout, and payment operations stop immediately", 
+                        ar: "توقف عمليات البيع والدفع بالكامل وتراكم العملاء فوراً", 
+                        isCorrect: true, 
+                        explanation_en: "Because TPS processes real-time frontline operations, any downtime immediately halts customer checkout and transactions.",
+                        explanation_ar: "لأن الـ TPS يدير العمليات اللحظية للكاشير، فإن تعطله يوقف حركة البيع والدفع في نفس اللحظة."
+                    },
+                    { en: "Only the annual executive report is delayed by one day", ar: "تأخر التقرير السنوي فقط", isCorrect: false },
+                    { en: "All historical backup data is wiped out", ar: "فقدان جميع البيانات التاريخية", isCorrect: false },
+                    { en: "The system automatically converts into an MIS", ar: "يتحول النظام تلقائياً إلى MIS", isCorrect: false }
+                ],
+                hint: "Frontline operational halt."
+            },
+
+            // --- Lecture 3 ---
+            {
+                cat: "Lecture 3: Web Basics & DNS",
+                q_en: "What is the primary function of Domain Name System (DNS) servers?",
+                q_ar: "ما الوظيفة الأساسية لخوادم الـ DNS على شبكة الإنترنت؟",
+                options: [
+                    { 
+                        en: "Translating human-readable domain names (e.g., google.com) into numeric IP addresses", 
+                        ar: "تحويل أسماء النطاقات (مثل google.com) إلى عناوين IP رقمية تفهمها الأجهزة", 
+                        isCorrect: true, 
+                        explanation_en: "DNS acts as the phonebook of the Internet, resolving domain names into IP addresses so browsers can load internet resources.",
+                        explanation_ar: "يعمل الـ DNS كدليل هاتف الإنترنت لتحويل الاسم النصي لعنوان IP رقمي يستطيع الجهاز الاتصال به."
+                    },
+                    { en: "Encrypting credit card data during transactions", ar: "تشفير بيانات البطاقة البنكية", isCorrect: false },
+                    { en: "Hosting HTML files and database assets", ar: "تخزين صفحات الـ HTML وقواعد البيانات", isCorrect: false },
+                    { en: "Distributing traffic evenly across backend servers", ar: "توزيع حركة الزوار بين السيرفرات", isCorrect: false }
+                ],
+                hint: "Acts like a phonebook mapping names to numbers."
+            },
+            {
+                cat: "Lecture 3: Web Basics & DNS",
+                q_en: "Which HTTP method is used when submitting a login form or registration data to a server?",
+                q_ar: "أي بروتوكول طلب (HTTP Method) يُستخدم عند إرسال بيانات تسجيل الدخول أو استمارة للسيرفر؟",
+                options: [
+                    { 
+                        en: "POST", 
+                        ar: "POST (إرسال بيانات للمعالجة)", 
+                        isCorrect: true, 
+                        explanation_en: "POST is designed to send data (like form inputs or credentials) in the request body to a server to create/process a resource.",
+                        explanation_ar: "تُستخدم POST لإرسال البيانات داخل جسم الطلب لمعالجتها في الخادم، بينما GET لجلب الصفحات فقط."
+                    },
+                    { en: "GET", ar: "GET (جلب الصفحات)", isCorrect: false },
+                    { en: "DELETE", ar: "DELETE (حذف البيانات)", isCorrect: false },
+                    { en: "HEAD", ar: "HEAD (جلب الترويسة فقط)", isCorrect: false }
+                ],
+                hint: "Sends data inside the request body."
+            },
+            {
+                cat: "Lecture 3: Web Basics & DNS",
+                q_en: "What does the HTTP Status Code 500 (Internal Server Error) indicate?",
+                q_ar: "ماذا يعني الرمز 500 (Internal Server Error) أثناء تصفح موقع إلكتروني؟",
+                options: [
+                    { 
+                        en: "An error occurred on the web server side (Server's fault)", 
+                        ar: "حدث عطل أو خطأ من طرف السيرفر (Server's fault)", 
+                        isCorrect: true, 
+                        explanation_en: "The 5xx HTTP status codes represent server-side failures where the server encountered an unexpected condition preventing request fulfillment.",
+                        explanation_ar: "عائلة الرموز 5xx تعبر عن وجود مشكلة أو عطل فني في خادم الويب نفسه."
+                    },
+                    { en: "The requested page was not found on the server (404)", ar: "الصفحة المطلوب التوصل إليها غير موجودة", isCorrect: false },
+                    { en: "The client request succeeded completely (200 OK)", ar: "تمت الاستجابة بنجاح تام", isCorrect: false },
+                    { en: "The user is unauthorized to access the page (401)", ar: "المستخدم غير مصرح له بالدخول", isCorrect: false }
+                ],
+                hint: "4xx status codes are client faults, 5xx are server faults."
+            },
+
+            // --- Lecture 4 ---
+            {
+                cat: "Lecture 4: Web Servers & Traffic",
+                q_en: "Why is Nginx often preferred over Apache for high-traffic websites (C10K Problem)?",
+                q_ar: "لماذا يُفضل استخدام Nginx في المواقع ذات الزيارات الضخمة (High Traffic / C10K Problem)؟",
+                options: [
+                    { 
+                        en: "Nginx uses an Event-driven asynchronous architecture with low, predictable memory usage.", 
+                        ar: "لأنه يعتمد معمارية قائمة على الأحداث (Event-driven) تستهلك ذاكرة منخفضة وثابتة", 
+                        isCorrect: true, 
+                        explanation_en: "Nginx processes thousands of connections within a single/few threads using an event-driven loop, avoiding Apache's process-per-request memory overhead.",
+                        explanation_ar: "يعتمد Nginx على Event-driven architecture ويتعامل مع آلاف الاتصالات بذاكرة ثابتة خفيفة."
+                    },
+                    { en: "Nginx supports directory configuration via .htaccess files", ar: "لأنه يدعم التعديل بواسطة ملفات .htaccess", isCorrect: false },
+                    { en: "Nginx creates a new process for every single user", ar: "لأنه ينشئ عملية خاصة بكل زائر", isCorrect: false },
+                    { en: "Nginx only works with dynamic PHP scripts", ar: "لأنه يعمل فقط مع سكربتات PHP الديناميكية", isCorrect: false }
+                ],
+                hint: "Focus on the Event-driven asynchronous model."
+            },
+            {
+                cat: "Lecture 4: Web Servers & Traffic",
+                q_en: "Which technology stores copies of static website assets in geographically distributed edge locations close to users?",
+                q_ar: "أي تقنية تقوم بتخزين نسخ من ملفات الموقع في نقاط قريبة جغرافياً من المستخدمين لتسريع التصفح؟",
+                options: [
+                    { 
+                        en: "CDN (Content Delivery Network)", 
+                        ar: "CDN (شبكة توزيع المحتوى)", 
+                        isCorrect: true, 
+                        explanation_en: "A CDN caches static content across global edge servers, reducing latency by serving users from the nearest geographic location.",
+                        explanation_ar: "شبكة CDN توزع المحتوى على خوادم قريبة جغرافياً (Edge Locations) لتقليل زمن الاستجابة."
+                    },
+                    { en: "DNS Resolver", ar: "خادم أسماء النطاقات", isCorrect: false },
+                    { en: "Relational Database", ar: "قاعدة البيانات العلائقية", isCorrect: false },
+                    { en: "Hypervisor Type 2", ar: "برنامج المحاكاة الافتراضية", isCorrect: false }
+                ],
+                hint: "Edge Locations around the world."
+            },
+
+            // --- Lecture 5 ---
+            {
+                cat: "Lecture 5: Cloud Computing",
+                q_en: "In which cloud service model does the provider manage OS/runtime, requiring developers to write code only?",
+                q_ar: "في أي نموذج خدمة سحابية يوفر المزود نظام التشغيل والبيئة، ويُطلب من المطور كتابة الكود فقط؟",
+                options: [
+                    { 
+                        en: "PaaS (Platform as a Service)", 
+                        ar: "PaaS (المنصة كخدمة)", 
+                        isCorrect: true, 
+                        explanation_en: "In PaaS, hardware, networking, and OS environment are managed by the provider, allowing developers to focus solely on code deployment.",
+                        explanation_ar: "في PaaS يتكفل المزود بالبيئة ونظام التشغيل، ويركز المطور على كتابة الكود وتطبيقه فقط."
+                    },
+                    { en: "IaaS (Infrastructure as a Service)", ar: "IaaS (البنية التحتية كخدمة)", isCorrect: false },
+                    { en: "SaaS (Software as a Service)", ar: "SaaS (البرمجيات كخدمة)", isCorrect: false },
+                    { en: "On-Premises", ar: "الاستضافة المحلية التقليدية", isCorrect: false }
+                ],
+                hint: "Platform managed for you; you just bring your application code."
+            },
+            {
+                cat: "Lecture 5: Cloud Computing",
+                q_en: "Why are Containers (like Docker) much lighter and faster to boot than Virtual Machines (VMs)?",
+                q_ar: "لماذا تعتبر الحاويات (Containers) مثل Docker أخف وأسرع في الإقلاع من الآلات الافتراضية (VMs)؟",
+                options: [
+                    { 
+                        en: "Containers share the Host OS Kernel instead of bundling a full Guest OS for each instance.", 
+                        ar: "الحاويات تشارك نواة نظام التشغيل المضيف (Host Kernel) بدلاً من تثبيت نظام تشغيل كامل لكل نسخة", 
+                        isCorrect: true, 
+                        explanation_en: "By sharing the host's OS kernel, containers avoid the heavy overhead of running separate operating systems, booting in milliseconds.",
+                        explanation_ar: "مشاركة نواة النظام المضيف تجعل الحاويات بالميجابايت وتقلع في أجزاء من الثانية."
+                    },
+                    { en: "Containers do not use any CPU or RAM resources", ar: "الحاويات لا تستهلك أي ذاكرة أو معالج", isCorrect: false },
+                    { en: "VMs cannot run on cloud servers", ar: "الآلات الافتراضية لا تعمل على السحابة", isCorrect: false },
+                    { en: "Containers include a separate hardware motherboard", ar: "الحاويات تحتوي على لوحة أم منفصلة", isCorrect: false }
+                ],
+                hint: "Shared Host Kernel vs Full Guest OS."
+            },
+
+            // --- Lecture 6 ---
+            {
+                cat: "Lecture 6: SDLC & Agile vs Waterfall",
+                q_en: "What percentage of total system lifecycle cost is typically consumed by the Maintenance phase?",
+                q_ar: "كم تبلغ نسبة تكلفة مرحلة الصيانة (Maintenance) من التكلفة الكلية الإجمالية للنظام طوال فترة حياته؟",
+                options: [
+                    { 
+                        en: "Approximately 60% of total lifecycle cost", 
+                        ar: "ما يقارب 60% من التكلفة الكلية للمشروع", 
+                        isCorrect: true, 
+                        explanation_en: "Ongoing post-deployment maintenance, bug fixes, updates, and adaptations account for nearly 60% of the long-term software budget.",
+                        explanation_ar: "تستهلك الصيانة والتحديثات المستمرة 60% من ميزانية المشروع طوال حياته."
+                    },
+                    { en: "10% of total cost", ar: "10% فقط من التكلفة", isCorrect: false },
+                    { en: "25% of total cost", ar: "25% من التكلفة", isCorrect: false },
+                    { en: "90% of total cost", ar: "90% من التكلفة", isCorrect: false }
+                ],
+                hint: "Consumes nearly three-fifths of the total lifecycle budget."
+            },
+            {
+                cat: "Lecture 6: SDLC & Agile vs Waterfall",
+                q_en: "Which testing level is performed by end-users or clients to verify the system meets business requirements before final sign-off?",
+                q_ar: "ما نوع الاختبار الذي يقوم به العميل أو المستخدم النهائي للتأكد من مطابقة النظام لمتطلبات العمل قبل الاستلام؟",
+                options: [
+                    { 
+                        en: "User Acceptance Testing (UAT)", 
+                        ar: "اختبار قبول المستخدم (UAT)", 
+                        isCorrect: true, 
+                        explanation_en: "UAT is the final testing phase where actual users validate that the software handles real-world business scenarios according to specifications.",
+                        explanation_ar: "اختبار قبول المستخدم (UAT) هو المرحلة النهائية التي يوافق فيها العميل على مطابقة النظام لاحتياجاته."
+                    },
+                    { en: "Unit Testing", ar: "اختبار الوحدات البرمجية", isCorrect: false },
+                    { en: "Integration Testing", ar: "اختبار التكامل", isCorrect: false },
+                    { en: "Syntax Checking", ar: "فحص الأخطاء الإملائية للكود", isCorrect: false }
+                ],
+                hint: "Final sign-off by the user/client."
+            }
+        ];
+
+        // Update badge count dynamically
+        document.getElementById('all-count-badge').innerText = `${allQuestions.length} Questions`;
+
+        let currentQuizQuestions = [];
+        let currentIndex = 0;
+        let score = 0;
+        let selectedOption = null;
+        let wrongAnswers = [];
+
+        function switchTab(tab) {
+            const quizSec = document.getElementById('section-quiz');
+            const summarySec = document.getElementById('section-summary');
+            const tabQuizBtn = document.getElementById('tab-quiz');
+            const tabSummaryBtn = document.getElementById('tab-summary');
+
+            if (tab === 'quiz') {
+                quizSec.classList.remove('hidden');
+                summarySec.classList.add('hidden');
+                
+                tabQuizBtn.className = "px-3 py-1.5 text-xs md:text-sm font-bold rounded-md bg-indigo-600 text-white transition";
+                tabSummaryBtn.className = "px-3 py-1.5 text-xs md:text-sm font-bold rounded-md text-slate-400 hover:text-white transition";
+            } else {
+                quizSec.classList.add('hidden');
+                summarySec.classList.remove('hidden');
+
+                tabSummaryBtn.className = "px-3 py-1.5 text-xs md:text-sm font-bold rounded-md bg-indigo-600 text-white transition";
+                tabQuizBtn.className = "px-3 py-1.5 text-xs md:text-sm font-bold rounded-md text-slate-400 hover:text-white transition";
+            }
+        }
+
+        // --- MODEL ANSWERS MODAL LOGIC ---
+        function openModelAnswersModal() {
+            const container = document.getElementById('modal-answers-container');
+            container.innerHTML = '';
+
+            let currentCategory = '';
+
+            allQuestions.forEach((qItem, idx) => {
+                if (qItem.cat !== currentCategory) {
+                    currentCategory = qItem.cat;
+                    const catHeader = document.createElement('div');
+                    catHeader.className = "text-md font-bold text-indigo-400 border-b border-indigo-900 pb-1 mt-4 mb-3 uppercase tracking-wide";
+                    catHeader.innerText = `📌 ${currentCategory}`;
+                    container.appendChild(catHeader);
+                }
+
+                const correctOpt = qItem.options.find(o => o.isCorrect);
+
+                const itemDiv = document.createElement('div');
+                itemDiv.className = "p-4 bg-slate-900/90 rounded-lg border border-slate-700/80 space-y-2 shadow-sm text-right";
+                itemDiv.innerHTML = `
+                    <div class="font-bold text-slate-100 en-text">${idx + 1}. ${qItem.q_en}</div>
+                    <div class="text-xs text-slate-400">${qItem.q_ar}</div>
+                    <div class="text-emerald-400 font-semibold bg-emerald-950/40 p-2 rounded border border-emerald-800/60 mt-2">
+                        <div class="en-text">✅ Model Answer: ${correctOpt.en}</div>
+                        <div class="text-xs text-emerald-300/80 mt-1">الترجمة: ${correctOpt.ar}</div>
+                    </div>
+                    <div class="text-slate-300 text-xs bg-slate-800 p-2.5 rounded leading-relaxed border border-slate-700 mt-2">
+                        <div class="en-text text-amber-300/90 mb-1">💡 <strong>Explanation:</strong> ${correctOpt.explanation_en}</div>
+                        <div class="text-slate-300">💡 <strong>الشرح والتوضيح:</strong> ${correctOpt.explanation_ar}</div>
+                    </div>
+                `;
+                container.appendChild(itemDiv);
+            });
+
+            document.getElementById('model-answers-modal').classList.remove('hidden');
+        }
+
+        function closeModelAnswersModal() {
+            document.getElementById('model-answers-modal').classList.add('hidden');
+        }
+
+        // --- QUIZ ENGINE LOGIC ---
+        function startQuiz(mode) {
+            if (mode === 'all') {
+                currentQuizQuestions = [...allQuestions];
+            } else {
+                const lecMap = {
+                    'lec1': 'Lecture 1',
+                    'lec2': 'Lecture 2',
+                    'lec3': 'Lecture 3',
+                    'lec4': 'Lecture 4',
+                    'lec5': 'Lecture 5',
+                    'lec6': 'Lecture 6'
+                };
+                currentQuizQuestions = allQuestions.filter(q => q.cat.includes(lecMap[mode]));
+            }
+
+            currentQuizQuestions.sort(() => Math.random() - 0.5);
+
+            currentIndex = 0;
+            score = 0;
+            wrongAnswers = [];
+
+            document.getElementById('selection-screen').classList.add('hidden');
+            document.getElementById('result-screen').classList.add('hidden');
+            document.getElementById('wrong-answers-list').classList.add('hidden');
+            document.getElementById('quiz-screen').classList.remove('hidden');
+            document.getElementById('quiz-progress').classList.remove('hidden');
+            document.getElementById('quiz-progress').classList.add('flex');
+            
+            document.getElementById('total-q-num').innerText = currentQuizQuestions.length;
+
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            const qData = currentQuizQuestions[currentIndex];
+            selectedOption = null;
+
+            document.getElementById('current-q-num').innerText = currentIndex + 1;
+            document.getElementById('q-category').innerText = qData.cat;
+            document.getElementById('q-text-en').innerText = qData.q_en;
+            document.getElementById('q-text-ar').innerText = qData.q_ar;
+            document.getElementById('hint-text').innerText = qData.hint;
+            document.getElementById('hint-text').classList.add('hidden');
+            
+            const expBox = document.getElementById('explanation-box');
+            expBox.classList.add('hidden');
+
+            document.getElementById('next-btn').classList.add('hidden');
+
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+
+            const options = [...qData.options].sort(() => Math.random() - 0.5);
+
+            options.forEach((opt) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-right p-4 rounded-lg bg-slate-700 hover:bg-slate-600 border border-slate-600 transition flex flex-col gap-1 text-slate-200 font-medium";
+                btn.innerHTML = `
+                    <div class="flex justify-between items-center w-full">
+                        <span class="en-text font-semibold text-slate-100">${opt.en}</span>
+                        <span class="opt-icon text-lg"></span>
+                    </div>
+                    <div class="text-xs text-slate-400">${opt.ar}</div>
+                `;
+                btn.onclick = () => selectAnswer(btn, opt, qData);
+                container.appendChild(btn);
+            });
+        }
+
+        function selectAnswer(selectedBtn, option, qData) {
+            if (selectedOption !== null) return;
+            selectedOption = option;
+
+            const container = document.getElementById('options-container');
+            const buttons = container.querySelectorAll('button');
+
+            buttons.forEach(btn => btn.disabled = true);
+
+            const expBox = document.getElementById('explanation-box');
+            expBox.classList.remove('hidden');
+
+            const correctOpt = qData.options.find(o => o.isCorrect);
+
+            if (option.isCorrect) {
+                score++;
+                selectedBtn.classList.remove('bg-slate-700');
+                selectedBtn.classList.add('bg-emerald-900/60', 'border-emerald-500', 'text-emerald-200');
+                selectedBtn.querySelector('.opt-icon').innerText = '✅';
+                
+                expBox.className = "mt-6 p-4 rounded-lg border text-sm leading-relaxed bg-emerald-950/40 border-emerald-800 text-emerald-300";
+                expBox.innerHTML = `
+                    <strong class="text-emerald-400">Correct Answer! / إجابة صحيحة 🎉</strong>
+                    <div class="en-text mt-2 font-medium">${correctOpt.explanation_en}</div>
+                    <div class="mt-1 text-xs text-emerald-300/80">${correctOpt.explanation_ar}</div>
+                `;
+            } else {
+                wrongAnswers.push({
+                    q_en: qData.q_en,
+                    q_ar: qData.q_ar,
+                    category: qData.cat,
+                    userAnswer_en: option.en,
+                    userAnswer_ar: option.ar,
+                    correctAnswer_en: correctOpt.en,
+                    correctAnswer_ar: correctOpt.ar,
+                    explanation_en: correctOpt.explanation_en,
+                    explanation_ar: correctOpt.explanation_ar
+                });
+
+                selectedBtn.classList.remove('bg-slate-700');
+                selectedBtn.classList.add('bg-rose-900/60', 'border-rose-500', 'text-rose-200');
+                selectedBtn.querySelector('.opt-icon').innerText = '❌';
+
+                buttons.forEach(b => {
+                    if (b.innerText.includes(correctOpt.en)) {
+                        b.classList.remove('bg-slate-700');
+                        b.classList.add('bg-emerald-900/40', 'border-emerald-600', 'text-emerald-300');
+                        b.querySelector('.opt-icon').innerText = '✅';
+                    }
+                });
+
+                expBox.className = "mt-6 p-4 rounded-lg border text-sm leading-relaxed bg-rose-950/40 border-rose-800 text-rose-300";
+                expBox.innerHTML = `
+                    <strong class="text-rose-400">Incorrect Answer! / إجابة خاطئة ⚠️</strong>
+                    <div class="en-text mt-2 font-medium">${correctOpt.explanation_en}</div>
+                    <div class="mt-1 text-xs text-rose-200/90">${correctOpt.explanation_ar}</div>
+                `;
+            }
+
+            document.getElementById('next-btn').classList.remove('hidden');
+        }
+
+        function toggleHint() {
+            const hint = document.getElementById('hint-text');
+            hint.classList.toggle('hidden');
+        }
+
+        function nextQuestion() {
+            currentIndex++;
+            if (currentIndex < currentQuizQuestions.length) {
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('quiz-screen').classList.add('hidden');
+            document.getElementById('quiz-progress').classList.add('hidden');
+            document.getElementById('quiz-progress').classList.remove('flex');
+            document.getElementById('result-screen').classList.remove('hidden');
+
+            const total = currentQuizQuestions.length;
+            const percentage = Math.round((score / total) * 100);
+
+            document.getElementById('final-score').innerText = `${score} / ${total} (${percentage}%)`;
+
+            const feedback = document.getElementById('score-feedback');
+            const emoji = document.getElementById('result-emoji');
+            const reviewBtn = document.getElementById('review-wrong-btn');
+
+            if (wrongAnswers.length > 0) {
+                reviewBtn.classList.remove('hidden');
+            } else {
+                reviewBtn.classList.add('hidden');
+            }
+
+            if (percentage >= 85) {
+                emoji.innerText = '🏆';
+                feedback.innerHTML = '<strong class="text-emerald-400">Excellent Job! / ممتاز جداً!</strong> You are well prepared for the exam.';
+            } else if (percentage >= 65) {
+                emoji.innerText = '👍';
+                feedback.innerHTML = '<strong class="text-amber-400">Good Score! / أداء جيد!</strong> Review the explanations for wrong answers to improve.';
+            } else {
+                emoji.innerText = '📚';
+                feedback.innerHTML = '<strong class="text-rose-400">Needs Revision! / تحتاج مراجعة!</strong> Please study the lecture summaries and explanations.';
+            }
+        }
+
+        function reviewWrongAnswers() {
+            const listContainer = document.getElementById('wrong-answers-list');
+            const itemsContainer = document.getElementById('wrong-items-container');
+            
+            itemsContainer.innerHTML = '';
+            
+            wrongAnswers.forEach((item, idx) => {
+                const div = document.createElement('div');
+                div.className = "p-4 bg-slate-900/80 rounded-lg border border-slate-700 text-sm text-right space-y-1";
+                div.innerHTML = `
+                    <div class="text-xs text-indigo-400 mb-1">${item.category}</div>
+                    <div class="font-bold text-slate-100 en-text">${idx + 1}. ${item.q_en}</div>
+                    <div class="text-xs text-slate-400 mb-2">${item.q_ar}</div>
+                    <div class="text-rose-400 text-xs">❌ Your Answer / إجابتك: ${item.userAnswer_en} (${item.userAnswer_ar})</div>
+                    <div class="text-emerald-400 text-xs">✅ Correct Answer / الإجابة الصحيحة: ${item.correctAnswer_en} (${item.correctAnswer_ar})</div>
+                    <div class="text-slate-300 bg-slate-800 p-3 rounded border border-slate-700 mt-2">
+                        <div class="en-text text-amber-300 text-xs mb-1">💡 <strong>Explanation:</strong> ${item.explanation_en}</div>
+                        <div class="text-xs">💡 <strong>الشرح:</strong> ${item.explanation_ar}</div>
+                    </div>
+                `;
+                itemsContainer.appendChild(div);
+            });
+
+            listContainer.classList.remove('hidden');
+        }
+
+        function resetQuiz() {
+            document.getElementById('result-screen').classList.add('hidden');
+            document.getElementById('selection-screen').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
